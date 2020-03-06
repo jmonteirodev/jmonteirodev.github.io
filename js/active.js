@@ -22,15 +22,6 @@
         }, 300);
     }).trigger("resize");
 
-    // :: Sticky Active Code
-    $window.on('scroll', function () {
-        if ($window.scrollTop() > 20) {
-            $('.header-area').addClass('sticky');
-        } else {
-            $('.header-area').removeClass('sticky');
-        }
-    });
-
     // :: Tooltip Active Code
     $('[data-toggle="tooltip"]').tooltip();
 
