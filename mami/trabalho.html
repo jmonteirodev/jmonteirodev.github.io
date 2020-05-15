@@ -15,7 +15,7 @@
     <link rel="icon" href="img/core-img/favicon.ico">
 
     <!-- Style CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -46,13 +46,13 @@
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Atividades</a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <div class="dropdown-menu linksAtvHeader" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="atividade0.html">Atividade 0</a>
                                     </div>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Trabalho</a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <div class="dropdown-menu linksTrabHeader" aria-labelledby="navbarDropdown">
                                         <!--<a class="dropdown-item" href="catagory.html">Atividades</a>-->
                                     </div>
                                 </li>
@@ -67,20 +67,20 @@
         <div class="container">
             <div class="world-latest-articles">
                 <div class="row">
-                    <div class="col-12 col-lg-12">
+                    <div class="col-12 col-lg-12 conteudo">
                         <div class="title">
-                            <h5>Atividade 0 - Teste</h5>
+                            <h5></h5>
                         </div>
-                            <div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil, vitae perspiciatis esse omnis sed exercitationem voluptatibus illum ullam tenetur reiciendis doloremque, dolore, sint dolorum sequi natus atque a aliquid.</p>
-                            </div>
-                            <div>
-                                <center><img src="img/blog-img/b18.jpg" style="width: 30%;" class="img-fluid" /></center>
-                            </div>
-                            <br>
-                            <div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil, vitae perspiciatis esse omnis sed exercitationem voluptatibus illum ullam tenetur reiciendis doloremque, dolore, sint dolorum sequi natus atque a aliquid.</p>
-                            </div>
+                        <div>
+                            <p></p>
+                        </div>
+                        <div>
+                            <center><img src="" style="width: 30%;" class="img-fluid" /></center>
+                        </div>
+                        <br>
+                        <div>
+                            <p></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -102,7 +102,7 @@
                     <div>
                         <ul>
                             <li style="color: aliceblue;">Atividades</li>
-                            <li><a href="atividade0.html" class="semLink">Atividade 0</a></li>
+                            <div class="linksAtvFooter"></div>
                         </ul>
                     </div>
                 </div>
@@ -110,6 +110,7 @@
                     <div>
                         <ul>
                             <li><a href="#">Trabalho</a></li>
+                            <div class="linksTrabFooter"></div>
                         </ul>
                     </div>
                 </div>
@@ -126,7 +127,27 @@
     <script src="js/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
-
+    <script src="js/infos.js"></script>
+    <script>
+        var id = new URL(window.location.href).searchParams.get("id");
+        if(id == null || id >= trabalhos.length){
+            window.location = 'index.html';
+        }
+        var texto = '<div class="title">'+
+        '    <h5>'+trabalhos[id].titulo+'</h5>'+
+        '</div>'+
+        '<div>'+
+        '    <p>'+trabalhos[id].texto+'</p>'+
+        '</div>'+
+        '<div>'+
+        '    <center><img src="'+trabalhos[id].imagem+'" style="width: 30%;" class="img-fluid" /></center>'+
+        '</div>'+
+        '<br>'+
+        '<div>'+
+        '   <p>'+trabalhos[id].texto+'</p>'+
+        '</div>';
+        $('.conteudo').html(texto);
+    </script>
 </body>
 
 </html>

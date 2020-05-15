@@ -9,13 +9,13 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title  -->
-    <title>Matemática aplicada a multimídia - Jonathan Monteiro</title>
+    <title>Principais projetos - Jonathan Monteiro</title>
 
     <!-- Favicon  -->
     <link rel="icon" href="img/core-img/favicon.ico">
 
     <!-- Style CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -40,19 +40,17 @@
                         <!-- Navbar -->
                         <div class="collapse navbar-collapse" id="worldNav">
                             <ul class="navbar-nav ml-auto">
-                                <li class="nav-item active">
+                                <li class="nav-item">
                                     <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Atividades</a>
-                                    <div class="dropdown-menu linksAtvHeader" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="atividade0.html">Atividade 0</a>
-                                    </div>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Trabalho</a>
-                                    <div class="dropdown-menu linksTrabHeader" aria-labelledby="navbarDropdown">
-                                        <!--<a class="dropdown-item" href="catagory.html">Atividades</a>-->
+                                <li class="nav-item dropdown active">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portfólio</a>
+                                    <div class="dropdown-menu linksPortfolioHeader" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item active" href="portfolio.html">Principais projetos</a>
+                                        <a class="dropdown-item" href="sites.html">Sites/sistemas</a>
+                                        <a class="dropdown-item" href="jogos.html">Jogos</a>
+                                        <a class="dropdown-item" href="aplicativos.html">Aplicativos</a>
+                                        <a class="dropdown-item" href="designs.html">Designs</a>
                                     </div>
                                 </li>
                             </ul>
@@ -122,43 +120,6 @@
           function mudarPagina(pagina){
                 window.location = pagina;
           }
-          var atvs = '';
-          for(var i = 0; i < atividades.length; i++){
-            atvs += '<div class="post-style-4 single-blog-post" style="cursor: pointer; padding: 25px;" onclick="mudarPagina(\'atividade.html?id='+i+'\')">'+
-                '<div class="post-title" style="padding: 5px">'+
-                '       <h5>'+atividades[i].titulo+'</h5>'+
-                '</div>'+
-                '<div class="d-flex">'+
-                '    <div class="post-thumbnail" style="padding: 5px">'+
-                '        <img src="'+atividades[i].imagem+'" alt="" >'+
-                '        </div>'+
-                '    <div class="post-content" style="padding: 0;">'+
-                '        <p style="text-align: justify; font-size:medium ">'+atividades[i].texto+'</p>'+
-                '    </div>'+
-                '</div>'+
-            '</div>'+
-            '<br>';
-          }
-          $('.atividades').html(atvs);
-          var atvs2 = '';
-          for(var i = 0; i < atividades.length; i++){
-            atvs2 += '<div class="col-12">'+
-                '<div class="single-blog-post post-style-2 d-flex align-items-center mb-1" style="padding: 10px"  onclick="mudarPagina(\'atividade.html?id='+i+'\')">'+
-                '    <div class="post-thumbnail">'+
-                '        <img src="'+atividades[i].imagem+'" alt="">'+
-                '    </div>'+
-                '    <div class="post-content">'+
-                '        <a href="#" class="headline">'+
-                '            <h5>'+atividades[i].titulo+'</h5>'+
-                '        </a>'+
-                '    <div class="post-content" style="padding: 0;">'+
-                '        <p style="text-align: justify; font-size:medium ">'+atividades[i].texto_curto+'</p>'+
-                '    </div>'+
-                '    </div>'+
-                '</div>'+
-            '</div>';
-          }
-          $('.atividades2').html(atvs2);
       </script>
 </body>
 
