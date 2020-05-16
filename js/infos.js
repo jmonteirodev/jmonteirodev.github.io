@@ -21,6 +21,32 @@ var atividades = [
         texto_curto : ''
     }
 ];
+var projetos = [
+{
+    src : "img/blog-img/b2.jpg",
+    nome : "Trabalho 1",
+    ano : 2020,
+    tipo : "aplicativo"
+},
+{
+    src : "img/blog-img/b1.jpg",
+    nome : "Trabalho 2",
+    ano : 2021,
+    tipo : "jogo"
+},
+{
+    src : "img/blog-img/b1.jpg",
+    nome : "Trabalho 2",
+    ano : 2021,
+    tipo : "design"
+},
+{
+    src : "img/blog-img/b1.jpg",
+    nome : "Trabalho 2",
+    ano : 2021,
+    tipo : "site"
+}
+];
 var trabalhos = [];
 var linksAtvHeader = '';
 var linksTrabHeader = '';

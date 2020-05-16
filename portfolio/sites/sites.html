@@ -9,10 +9,10 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title  -->
-    <title>Principais projetos - Jonathan Monteiro</title>
+    <title>Sites - Jonathan Monteiro</title>
 
     <!-- Favicon  -->
-    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="icon" href="../../img/core-img/favicon.ico">
     <style type="text/css">
         .container {
           position: relative;
@@ -53,7 +53,7 @@
     }
 </style>
 <!-- Style CSS -->
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../../style.css">
 </head>
 
 <body>
@@ -72,23 +72,23 @@
                 <div class="col-12">
                     <nav class="navbar navbar-expand-lg">
                         <!-- Logo -->
-                        <a class="navbar-brand semLink" style="font-size: 14px" href="index.html">JONATHAN MONTEIRO</a>
+                        <a class="navbar-brand semLink" style="font-size: 14px" href="../../index.html">JONATHAN MONTEIRO</a>
                         <!-- Navbar Toggler -->
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#worldNav" aria-controls="worldNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                         <!-- Navbar -->
                         <div class="collapse navbar-collapse" id="worldNav">
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link" href="../../index.html">Home <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item dropdown active">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portfólio</a>
                                     <div class="dropdown-menu linksPortfolioHeader" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item active" href="portfolio.html">Principais projetos</a>
-                                        <a class="dropdown-item" href="portfolio/sites/sites.html">Sites/sistemas</a>
-                                        <a class="dropdown-item" href="portfolio/jogos/jogos.html">Jogos</a>
-                                        <a class="dropdown-item" href="portfolio/aplicativos/aplicativos.html">Aplicativos</a>
-                                        <a class="dropdown-item" href="portfolio/designs/designs.html">Designs</a>
+                                        <a class="dropdown-item" href="../../portfolio.html">Principais projetos</a>
+                                        <a class="dropdown-item active" href="../sites/sites.html">Sites/sistemas</a>
+                                        <a class="dropdown-item" href="../jogos/jogos.html">Jogos</a>
+                                        <a class="dropdown-item" href="../aplicativos/aplicativos.html">Aplicativos</a>
+                                        <a class="dropdown-item" href="../designs/designs.html">Designs</a>
                                     </div>
                                 </li>
                             </ul>
@@ -104,11 +104,11 @@
                 <div class="row">
                     <div class="col-12 col-lg-12">
                         <div class="title">
-                            <h5  style="padding-left: 30px">Principais projetos</h5>
+                            <h5  style="padding-left: 30px">Sites</h5>
                         </div>
                         <center>
                             <div id="buttons">
-                                <button type="button" class="btn btn-outline-primary" onclick="botaoClicado(this)" style="margin:10px">TODOS</button>
+                                <button type="button" class="btn btn-outline-primary active" onclick="botaoClicado(this)" style="margin:10px">TODOS</button>
                             </div>
                         </center>
                         <div id="projetos" class="row">
@@ -121,11 +121,11 @@
                                 <span class="sr-only">Previous</span>
                             </a>
                         </li>
-                </ul>
-            </nav>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </div>
-</div>
 </div>
 </div>
 <footer class="footer-area" style="padding: 30px" >
@@ -159,16 +159,16 @@
     </div>
 </footer>
 <!-- jQuery (Necessary for All JavaScript Plugins) -->
-<script src="js/jquery/jquery-2.2.4.min.js"></script>
+<script src="../../js/jquery/jquery-2.2.4.min.js"></script>
 <!-- Popper js -->
-<script src="js/popper.min.js"></script>
+<script src="../../js/popper.min.js"></script>
 <!-- Bootstrap js -->
-<script src="js/bootstrap.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
 <!-- Plugins js -->
-<script src="js/plugins.js"></script>
+<script src="../../js/plugins.js"></script>
 <!-- Active js -->
-<script src="js/active.js"></script>
-<script src="js/infos.js"></script>
+<script src="../../js/active.js"></script>
+<script src="../../js/infos.js"></script>
 <script>
   function mudarPagina(pagina){
     window.location = pagina;
@@ -176,9 +176,9 @@
 var abas = [1];
 var butoes = [];
 for(var i = 0; i < projetos.length; i++){
-  if((butoes.indexOf(projetos[i].ano) == -1)){
-   butoes.push(projetos[i].ano);
-}
+  if((butoes.indexOf(projetos[i].ano) == -1 && projetos[i].tipo == "site")){
+     butoes.push(projetos[i].ano);
+ }
 }
 for(var i = 0; i < butoes.length; i++){
     $("#buttons").append('<button type="button" class="btn btn-outline-primary" onclick="botaoClicado(this, '+butoes[i]+')" style="margin:10px">'+butoes[i]+'</button>');
@@ -187,9 +187,9 @@ for(var i = 0; i < butoes.length; i++){
 atualizaProjetos();
 function botaoClicado(btn, ano){
     console.log(ano);
-        $("button").removeClass("active");
-        $(btn).addClass("active");
-        atualizaProjetos(ano);
+    $("button").removeClass("active");
+    $(btn).addClass("active");
+    atualizaProjetos(ano);
 
 }
 function atualizaProjetos(ano){
@@ -199,7 +199,7 @@ function atualizaProjetos(ano){
     abas = [1];
     var contador = 1;
     for(var i = 0; i < projetos.length; i++){
-        if(ano == undefined || projetos[i].ano == ano){           
+        if((ano == undefined || projetos[i].ano == ano ) && projetos[i].tipo == "site"){           
             projetos[i].id = contador++;
             projetos[i].aba = aba;
             if(projetos[i].id % 9 == 0){
@@ -209,7 +209,7 @@ function atualizaProjetos(ano){
             }
             if(projetos[i].id <= 9){
                 $("#projetos").append( '<div class="col-sm-4 projeto" onclick="irPara(\''+projetos[i].tipo+'\', \''+projetos[i].nome+'\')">'+
-                    '        <img src="'+projetos[i].src+'" alt="'+projetos[i].nome+'">'+
+                    '        <img src="../../'+projetos[i].src+'" alt="'+projetos[i].nome+'">'+
                     '        <div class="overlay">'+
                     '            <div class="text">'+projetos[i].nome+'<p style="color: white">'+projetos[i].ano+'</p></div>'+
                     '        </div>'+
@@ -250,7 +250,7 @@ function atualizaProjetos(ano){
     mostrarNomes();
 }
 function irPara(pagina, nome){
-    window.location = "portfolio/"+pagina+'s/'+pagina+'.html?'+pagina+'='+nome;
+    window.location = pagina+'.html?'+pagina+'='+nome;
 }
 function abaProxima(){
     var aba = $(".active").closest(".page-item").attr("aba");
@@ -289,7 +289,7 @@ function atualizaAba(link){
     for(var i = 0; i < projetos.length; i++){
         if(projetos[i].aba == aba){
             $("#projetos").append( '<div class="col-sm-4 projeto">'+
-                '        <img src="'+projetos[i].src+'" alt="'+projetos[i].nome+'">'+
+                '        <img src="../../'+projetos[i].src+'" alt="'+projetos[i].nome+'">'+
                 '        <div class="overlay">'+
                 '            <div class="text">'+projetos[i].nome+'<p style="color: white">'+projetos[i].ano+'</p></div>'+
                 '        </div>'+
