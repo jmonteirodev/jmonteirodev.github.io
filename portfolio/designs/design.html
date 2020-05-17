@@ -9,7 +9,7 @@
         <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
         <!-- Title  -->
-        <title>Aplicativos - Jonathan Monteiro</title>
+        <title>Designs - Jonathan Monteiro</title>
 
         <!-- Favicon  -->
         <link rel="icon" href="../../img/core-img/favicon.ico">
@@ -91,8 +91,8 @@
                                         <a class="dropdown-item" href="../../portfolio.html">Principais projetos</a>
                                         <a class="dropdown-item" href="../sites/sites.html">Sites/sistemas</a>
                                         <a class="dropdown-item" href="../jogos/jogos.html">Jogos</a>
-                                        <a class="dropdown-item active" href="../aplicativos/aplicativos.html">Aplicativos</a>
-                                        <a class="dropdown-item" href="../designs/designs.html">Designs</a>
+                                        <a class="dropdown-item" href="../aplicativos/aplicativos.html">Aplicativos</a>
+                                        <a class="dropdown-item active" href="../designs/designs.html">Designs</a>
                                     </div>
                                 </li>
                             </ul>
@@ -112,31 +112,22 @@
                               <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
                                 <li class="breadcrumb-item"><a href="../../portfolio.html">Portfólio</a></li>
-                                <li class="breadcrumb-item"><a href="../aplicativos/aplicativos.html">Aplicativos</a></li>
-                                <li class="breadcrumb-item active" id="aplicativo" style="color: black">Aplicativo</li>
+                                <li class="breadcrumb-item"><a href="../designs/designs.html">Designs</a></li>
+                                <li class="breadcrumb-item active" id="design" style="color: black">Design</li>
                             </ol>
                         </nav>
-                        <h5  style="padding-left: 30px">Aplicativo: </h5>
+                        <h5  style="padding-left: 30px">Design: </h5>
                     </div>
                     <div class="container">
                         <center>
                             <div class="col-6">
-                                <div class="projeto" onclick="downloadApp()">
-                                    <img src="../../img/blog-img/b1.jpg" alt="projetos[i].nome+'" class="image">
-                                    <div class="overlay">
-                                        <div class="text">Download APK</div>
-                                    </div>
+                                <div class="projeto">
+                                    <img src="../../img/blog-img/b1.jpg" class="image">
                                 </div>
                             </div>
                         </center>
                         <br>
-                        <div class="conteudo">                        
-                            <div class="card border-warning mb-12">
-                              <div class="card-body text-warning">
-                                <strong><p class="card-text" style="color: black; font-size: 15px">Clique na imagem para baixar o aplicativo!</p></strong>
-                            </div>
-                        </div>
-                        <br>
+                        <div class="conteudo">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -223,34 +214,23 @@
 <script src="../../js/active.js"></script>
 <script src="../../js/infos.js"></script>
 <script type="text/javascript">
-    var aplicativo = {};
-    if(window.location.href.includes("aplicativo=")){
-        var appNome = window.location.href.split("aplicativo=")[1];
-        console.log(appNome);
-        appNome = appNome.split("%20").join(" ");
-        console.log(appNome);
+    var design = {};
+    if(window.location.href.includes("design=")){
+        var projetoNome = window.location.href.split("design=")[1];
+        console.log(projetoNome);
+        projetoNome = projetoNome.split("%20").join(" ");
+        console.log(projetoNome);
 
         for(var i = 0; i < projetos.length; i++){
-            if(projetos[i].nome == projetoNome && projetos[i].tipo == "aplicativo"){
-                aplicativo = projetos[i];
+            if(projetos[i].nome == projetoNome && projetos[i].tipo == "design"){
+                design = projetos[i];
             }
         }
-        $("#aplicativo").html(appNome);
-        $(".projeto img").attr("src", '../../'+aplicativo.src);
-        $(".title h5").append(appNome);
+        $(".projeto img").attr("src", '../../'+design.src);
+        $("#design").html(projetoNome);
+        $(".title h5").append(projetoNome);
     }else{
-        window.location = "aplicativos.html";
-    }
-    $(".projeto").mouseover(function(){
-        $(this).find(".overlay").css("opacity",0.6);
-    });
-
-    $(".projeto").mouseout(function(){
-        $(this).find(".overlay").css("opacity",0);
-    });
-
-    function downloadApp(){
-        window.location  = aplicativo.site;
+        window.location = "designs.html";
     }
 </script>
 </body>

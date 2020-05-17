@@ -9,7 +9,7 @@
         <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
         <!-- Title  -->
-        <title>Aplicativos - Jonathan Monteiro</title>
+        <title>Sites - Jonathan Monteiro</title>
 
         <!-- Favicon  -->
         <link rel="icon" href="../../img/core-img/favicon.ico">
@@ -49,10 +49,17 @@
               text-align: center;
           }
           .projeto{
-            padding: 15px;
+            padding: 18px;
+        }
+
+        .badge{
+            font-size: 15px;
+            margin: 3px;
+            padding: 10px !important;
         }
         .conteudo p{
             color: black;
+            font-size: 15px;
             text-align: justify;
         }
     </style>
@@ -89,9 +96,9 @@
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portfólio</a>
                                     <div class="dropdown-menu linksPortfolioHeader" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="../../portfolio.html">Principais projetos</a>
-                                        <a class="dropdown-item" href="../sites/sites.html">Sites/sistemas</a>
+                                        <a class="dropdown-item active" href="../sites/sites.html">Sites/sistemas</a>
                                         <a class="dropdown-item" href="../jogos/jogos.html">Jogos</a>
-                                        <a class="dropdown-item active" href="../aplicativos/aplicativos.html">Aplicativos</a>
+                                        <a class="dropdown-item" href="../aplicativos/aplicativos.html">Aplicativos</a>
                                         <a class="dropdown-item" href="../designs/designs.html">Designs</a>
                                     </div>
                                 </li>
@@ -112,19 +119,24 @@
                               <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
                                 <li class="breadcrumb-item"><a href="../../portfolio.html">Portfólio</a></li>
-                                <li class="breadcrumb-item"><a href="../aplicativos/aplicativos.html">Aplicativos</a></li>
-                                <li class="breadcrumb-item active" id="aplicativo" style="color: black">Aplicativo</li>
+                                <li class="breadcrumb-item"><a href="../sites/sites.html">Sites</a></li>
+                                <li class="breadcrumb-item active" id="site" style="color: black">Site</li>
                             </ol>
                         </nav>
-                        <h5  style="padding-left: 30px">Aplicativo: </h5>
+                        <h5  style="padding-left: 30px">Site: </h5>
                     </div>
                     <div class="container">
                         <center>
                             <div class="col-6">
-                                <div class="projeto" onclick="downloadApp()">
-                                    <img src="../../img/blog-img/b1.jpg" alt="projetos[i].nome+'" class="image">
+                                <div class="projeto" onclick="irPara()">
+                                    <img src="../../img/blog-img/b1.jpg" alt="" class="image">
                                     <div class="overlay">
-                                        <div class="text">Download APK</div>
+                                        <div class="text">Ir para a página</div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="canvas">
+
                                     </div>
                                 </div>
                             </div>
@@ -133,46 +145,17 @@
                         <div class="conteudo">                        
                             <div class="card border-warning mb-12">
                               <div class="card-body text-warning">
-                                <strong><p class="card-text" style="color: black; font-size: 15px">Clique na imagem para baixar o aplicativo!</p></strong>
+                                <strong><p class="card-text" style="color: black; font-size: 15px">Clique na imagem para ir para a página! Clique <a href="">aqui</a> para ter acesso ao código!</p></strong>
                             </div>
                         </div>
                         <br>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <div id="conteudo">
+
+                        </div>
+                        <div id="participacao">
+
+                        </div>
+                        <div id="linguagens"></div>
                     </div>
                 </div>
             </div>
@@ -180,7 +163,6 @@
     </div>
 </div>
 </div>
-<br />
 <footer class="footer-area" style="padding: 30px" >
     <div class="container">
         <div class="row">
@@ -223,23 +205,30 @@
 <script src="../../js/active.js"></script>
 <script src="../../js/infos.js"></script>
 <script type="text/javascript">
-    var aplicativo = {};
-    if(window.location.href.includes("aplicativo=")){
-        var appNome = window.location.href.split("aplicativo=")[1];
-        console.log(appNome);
-        appNome = appNome.split("%20").join(" ");
-        console.log(appNome);
+    var site = {};
+    if(window.location.href.includes("site=")){
+        var projetoNome = window.location.href.split("site=")[1];
+        console.log(projetoNome);
+        projetoNome = projetoNome.split("%20").join(" ");
+        console.log(projetoNome);
 
         for(var i = 0; i < projetos.length; i++){
-            if(projetos[i].nome == projetoNome && projetos[i].tipo == "aplicativo"){
-                aplicativo = projetos[i];
+            if(projetos[i].nome == projetoNome && projetos[i].tipo == "site"){
+                site = projetos[i];
             }
         }
-        $("#aplicativo").html(appNome);
-        $(".projeto img").attr("src", '../../'+aplicativo.src);
-        $(".title h5").append(appNome);
+
+        for(var i = 0; i < site.linguagens.length; i++){
+            $("#linguagens").append('<span class="badge badge-primary">'+site.linguagens[i]+'</span>');
+        }
+        $(".projeto img").attr("src", '../../'+site.src);
+        $("#conteudo").html(site.conteudo);
+        $("#participacao").html(site.participacao);
+        $(".card-text a").attr("href",site.codigo);
+        $("#site").html(projetoNome);
+        $(".title h5").append(projetoNome);
     }else{
-        window.location = "aplicativos.html";
+        window.location = "sites.html";
     }
     $(".projeto").mouseover(function(){
         $(this).find(".overlay").css("opacity",0.6);
@@ -249,8 +238,8 @@
         $(this).find(".overlay").css("opacity",0);
     });
 
-    function downloadApp(){
-        window.location  = aplicativo.site;
+    function irPara(){
+        window.location  = site.site;
     }
 </script>
 </body>
