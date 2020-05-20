@@ -23,7 +23,7 @@ var atividades = [
 ];
 var projetos = [
 {
-    src : "img/jogos/gestus.png",
+    src : "img/sites/gestus.png",
     nome : "Gestus",
     ano : 2020,
     tipo : "site",
@@ -32,7 +32,39 @@ var projetos = [
     linguagens : ['HTML','CSS','JavaScript', 'JQuery'],
     codigo : 'https://github.com/gestusjogo/gestusjogo.github.io',
     site : 'https://gestusjogo.github.io/'
-}
+},
+{
+    src : "img/jogos/goMonkey.png",
+    nome : "GO MONKEY!",
+    ano : 2020,
+    tipo : "jogo",
+    conteudo : '<p>O jogo "GO MONKEY!" foi desenvolvido em 2020 para a cadeira de <b>Matemática Aplicada a Multimídia</b> no segundo semestre do curso de <b>Sistemas e Mídias Digitais</b> da <b>Universidade Federal do Ceará</b>. O objetivo do trabalho foi criar um releitura de um jogo clássico da segunda geração de video games( Atari 2600, Magnavox Odyssey 2, entre outros). O escolhido por mim foi o Squish \'em. O Squish\'em, também conhecido como Squish\'em Sam, é um videogame de 1983 projetado por Tony Ngo e publicado pela Sirius Software para a família de 8 bits Atari, VIC-20, Commodore 64, MSX e o console ColecoVision.</p><p>O macaco Squish(Em homenagem ao nome original do jogo) tem como objetivo resgatar o seu pequeno filhote capturado por uma águia e levado ao ninho da mesma no topo de uma imensa árvore. Squish tem que escalar no cipos e andar nos troncos da árvore enquanto derruba lagartos e esquiva das pedras jogadas pela águia.</p>',
+    participacao : '<h5>Minha participação no <b>Go Monkey!</b></h5><p>Foi meu primeiro jogo desenvolvido individualmente, tanto a parte da programação quanto a de design, que foi um grande desafio pois não sabia como criar artes e animações muito bem, mas acredito que consegui ficar satisfeito com o resultado. O personagem e suas animações foram desenvolvidos com Adobe Illustrator e com base nos típicos desenhos de macacos. A águia e os lagartos foram baseados em animais reais e suas animações foram com base em movimentos básicos de animação.</p>',
+    linguagens : ['Godot Engine', "GDScript"],
+    codigo : 'https://github.com/jonathanmonteirodev/Go_monkey',
+    zip : "window.location.href='https://github.com/jonathanmonteirodev/Go_monkey/raw/master/GOMONKEY.zip';",
+    exe : "window.location.href='https://github.com/jonathanmonteirodev/Go_monkey/raw/master/GOMONKEY.exe';",
+    pck : "window.location.href='https://github.com/jonathanmonteirodev/Go_monkey/raw/master/GOMONKEY.pck';"
+},
+{
+    src : "img/designs/squish_andar.png",
+    nome : "Animação macaco bebê chorando",
+    ano : 2020,
+    tipo : "design",
+    conteudo : '<p>O jogo "GO MONKEY!" foi desenvolvido em 2020 para a cadeira de <b>Matemática Aplicada a Multimídia</b> no segundo semestre do curso de <b>Sistemas e Mídias Digitais</b> da <b>Universidade Federal do Ceará</b>. O objetivo do trabalho foi criar um releitura de um jogo clássico da segunda geração de video games( Atari 2600, Magnavox Odyssey 2, entre outros). O escolhido por mim foi o Squish \'em. O Squish\'em, também conhecido como Squish\'em Sam, é um videogame de 1983 projetado por Tony Ngo e publicado pela Sirius Software para a família de 8 bits Atari, VIC-20, Commodore 64, MSX e o console ColecoVision.</p><p>O macaco Squish(Em homenagem ao nome original do jogo) tem como objetivo resgatar o seu pequeno filhote capturado por uma águia e levado ao ninho da mesma no topo de uma imensa árvore. Squish tem que escalar no cipos e andar nos troncos da árvore enquanto derruba lagartos e esquiva das pedras jogadas pela águia.</p>',
+    participacao : '<h5>Minha participação no <b>Go Monkey!</b></h5><p>Foi meu primeiro jogo desenvolvido individualmente, tanto a parte da programação quanto a de design, que foi um grande desafio pois não sabia como criar artes e animações muito bem, mas acredito que consegui ficar satisfeito com o resultado. O personagem e suas animações foram desenvolvidos com Adobe Illustrator e com base nos típicos desenhos de macacos. A águia e os lagartos foram baseados em animais reais e suas animações foram com base em movimentos básicos de animação.</p>',
+    linguagens : ['Godot Engine', "GDScript"]
+},
+];
+
+var design_info = [
+    {
+        nome: "",
+        src: "",
+        frames: 0,
+        altura: 0,
+        largura: 0
+    }
 ];
 var trabalhos = [];
 var linksAtvHeader = '';

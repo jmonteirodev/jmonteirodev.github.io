@@ -118,77 +118,40 @@
                         </nav>
                         <h5  style="padding-left: 30px">Jogo: </h5>
                     </div>
-                    <div class="container">
-                        <center>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="projeto" onclick="downloadExe()">
-                                        <img src="../../img/blog-img/b1.jpg" alt="projetos[i].nome+'" class="image">
-                                        <div class="overlay">
-                                            <div class="text">Download EXE</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="canvas">
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </center>
+                    <div class="container conteudo">
+                        <div class="row">
+                        </div>
                         <br>
                         <div class="conteudo">                        
                             <div class="card border-warning mb-12">
+                                <div class="card-body text-warning">
+                                    <strong><p class="card-text" style="color: black; font-size: 15px">Clique na imagem para baixar o arquivo .zip com os arquivos exe e pck, fique tranquilo caso apareça um alerta de segurança padrão, pode clicar em manter. Ou clique <a onClick="" id="exe" target="_blank">aqui</a> para baixar o EXE e <a onClick="" id="pck" target="_blank">aqui</a> para baixar o PCK! É necessário os dois arquivos para funcionar!</p></strong>
+                                </div>   
+                            </div>      
+                            <br />          
+                            <div class="card border-warning mb-12">
                               <div class="card-body text-warning">
-                                <strong><p class="card-text" style="color: black; font-size: 15px">Clique na imagem para baixar o EXE!</p></strong>
+                                <strong><p class="card-text" style="color: black; font-size: 15px">Clique <a href="">aqui</a> para ter acesso ao código!</p></strong>
                             </div>
                         </div>
-                        <br>
-                        <div class="conteudo">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <a onClick="" id="exe" target="_blank"></a>
+                        <a onClick="" id="pck" target="_blank"></a>
+                        <a onClick="" id="zip" target="_blank"></a>
                     </div>
+                    <br>
+                    <div id="conteudo">
+                    </div>
+                    <div id="participacao">
+
+                    </div>
+                    <div id="linguagens"></div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 </div>
-<br />
+</div>
 <footer class="footer-area" style="padding: 30px" >
     <div class="container">
         <div class="row">
@@ -234,19 +197,29 @@
     var jogo = {};
     if(window.location.href.includes("jogo=")){
         var projetoNome = window.location.href.split("jogo=")[1];
-        console.log(projetoNome);
         projetoNome = projetoNome.split("%20").join(" ");
-        console.log(projetoNome);
-
         for(var i = 0; i < projetos.length; i++){
             if(projetos[i].nome == projetoNome && projetos[i].tipo == "jogo"){
                 jogo = projetos[i];
             }
         }
+        for(var i = 0; i < jogo.linguagens.length; i++){
+            $("#linguagens").append('<span class="badge badge-primary">'+jogo.linguagens[i]+'</span>');
+        }
         $(".projeto img").attr("src", '../../'+jogo.src);
         console.log(jogo);
-        if(jogo.link != undefined)
-            $(".canvas").html('<object width="100%" class="link" height="285" style="padding-top: 15px" data="'+jogo.link+'"></object>');
+        if(jogo.video != undefined){
+            $(".container .conteudo").find(".row").append('<div class="col-6"> <div class="projeto" onclick="downloadZip();"> <img src="../../'+jogo.src+'" class="image"> <div class="overlay"> <div class="text">Download EXE e PCK</div> </div> </div> </div>');             
+            $(".container .conteudo").find(".row").append('<div class="col-6"><div class="canvas"><object width="100%" class="link" height="285" style="padding-top: 15px" data="'+jogo.video+'"></object></div></div>');
+        }else{
+            $(".container .conteudo").find(".row").append('<center> <div class="col-6"> <div class="projeto" onclick="downloadZip();"> <img src="../../'+jogo.src+'" class="image"> <div class="overlay"> <div class="text">Download EXE e PCK</div> </div> </div> </div> </center>');             
+        }
+        $("#exe").attr("onClick", jogo.exe);
+        $("#pck").attr("onClick", jogo.pck);
+        $("#zip").attr("onClick", jogo.zip);
+        $("#conteudo").html(jogo.conteudo);
+        $("#participacao").html(jogo.participacao);
+        $(".card-text:last-child a").attr("href",jogo.codigo);
         $("#jogo").html(projetoNome);
         $(".title h5").append(projetoNome);
     }else{
@@ -260,8 +233,8 @@
         $(this).find(".overlay").css("opacity",0);
     });
 
-    function downloadExe(){
-        window.location  = jogo.site;
+    function downloadZip(){
+        $("#zip").click();
     }
 </script>
 </body>
