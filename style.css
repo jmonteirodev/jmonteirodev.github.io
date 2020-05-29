@@ -726,7 +726,7 @@ margin-right: auto;
 font-family: "Ubuntu", sans-serif;
 font-weight: 700;
 padding: 10px 0;
-border-bottom: 2px solid #f1f1f1; }
+border-bottom: 2px solid gray ; }
 
 .post-sidebar-area {
 border-left: 2px solid #f1f1f1; }
@@ -1299,3 +1299,6 @@ z-index: 1; }
 p{
   text-indent: 50px;
 }
+input[type=range] {
+  pointer-events: none;
+ }

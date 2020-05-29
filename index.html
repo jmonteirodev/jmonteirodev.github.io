@@ -15,8 +15,9 @@
     <link rel="icon" href="img/core-img/favicon.ico">
 
     <!-- Style CSS -->
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/jquery.bxslider.min.css">
+    <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="style.css">
     <style>
         .card-body a{
             color: black !important;
@@ -108,18 +109,68 @@
                             </div>
                         </div>
                         <br />
-                        <h2 style="text-align: center;">Projetos</h2>
+                        <div class="container">
+                            <h2 style="text-align: center;">PROJETOS</h2>
+                            <br />
+                            <ul class="bxslider"> </ul>
+                        </div>
+                        <div>
+                            <h2 style="text-align: center;">EXPERIÊNCIAS PROFISSIONAIS</h2>
+                            <div class="timeline-roxo timeline">
+                                <div class="container-timeline left">
+                                  <div class="content">
+                                    <h2>2017</h2>
+                                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                                  </div>
+                                </div>
+                                <div class="container-timeline right">
+                                  <div class="content">
+                                    <h2>2016</h2>
+                                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
                         <br />
-                        <ul class="bxslider">
-                            <li><a><img src="img/sites/gestus.png" /></a></li>
-                            <li><a><img src="img/sites/gestus.png" /></a></li>
-                            <li><a><img src="img/sites/gestus.png" /></a></li>
-                            <li><a><img src="img/sites/gestus.png" /></a></li>
-                            <li><a><img src="img/sites/gestus.png" /></a></li>
-                            <li><a><img src="img/sites/gestus.png" /></a></li>
-                            <li><a><img src="img/sites/gestus.png" /></a></li>
-                            <li><a><img src="img/sites/gestus.png" /></a></li>
-                        </ul>
+                        <div>
+                            <h2 style="text-align: center;">FORMAÇÃO ACADÊMICA</h2>
+                            <div class="timeline-azul timeline">
+                                <div class="container-timeline left">
+                                  <div class="content">
+                                    <h2>2017</h2>
+                                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                                  </div>
+                                </div>
+                                <div class="container-timeline right">
+                                  <div class="content">
+                                    <h2>2016</h2>
+                                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        <br>
+                        <div>
+                            <h2 style="text-align: center;">HABILIDADES</h2>
+                            <div class="habilidades_profissional">
+                                <div class="title">
+                                    <h5  style="padding-left: 30px">Profissional</h5>
+                                </div>
+                                <div class="row hab"></div>
+                            </div>
+                            <div class="habilidades_pessoal">
+                                <div class="title">
+                                    <h5  style="padding-left: 30px">Pessoal</h5>
+                                </div>
+                                <div class="row hab"></div>
+                            </div>
+                            <div class="habilidades_idiomas">
+                                <div class="title">
+                                    <h5  style="padding-left: 30px">Idiomas</h5>
+                                </div>
+                                <div class="row hab"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -168,6 +219,9 @@
     <script src="js/infos.js"></script>
     <script src="js/jquery.bxslider.min.js"></script>
       <script>
+        for(i in projetos){
+            $(".bxslider").append('<li><a><img src="'+projetos[i].src+'" /></a></li>');
+        }
         function mudarPagina(pagina){
             window.location = pagina;
         }
@@ -180,6 +234,25 @@
             }
                 var next = char.pop();
                 $(el).append(next);
+            }, tempo);
+        }
+        function ranges(tempo) {
+            var contador = 0;
+            var typer = setInterval(function() {
+                contador++;
+                $("input[type='range']").each(function(){
+                    parar = true;
+                    if($(this).val() < parseInt($(this).attr("data-value"))){
+                        parar = false;
+                        var valor = parseInt($(this).val());
+                        valor++;
+                        $(this).val(valor);
+                        $(this).closest(".row").find(".col-1").html(valor+"%");
+                    }
+                });
+                if (contador == 100){ 
+                    return clearInterval(typer);
+                }
             }, tempo);
         }
         function piscar(str, el, tempo){
@@ -202,7 +275,23 @@
         moveSlides: 1,
         auto: true,
         slideMargin:20
-	});
+    });
+    var hab_pro = [{
+        nome : "HTML",
+        valor : 80
+    },{
+        nome : "CSS",
+        valor : 100
+    },{
+        nome : "JS",
+        valor : 10
+    }];
+    for(i in hab_pro){
+        $(".habilidades_profissional").find(".hab").append('<div class="col-4"><br /><label>'+hab_pro[i].nome+'</label><div class="row"><div class="col-10"><input type="range" class="form-control-range" value="0" data-value="'+hab_pro[i].valor+'"></div><div class="col-1" style="margin-top: -5px;">0%</div></div></div>');
+        $(".habilidades_pessoal").find(".hab").append('<div class="col-4"><br /><label>'+hab_pro[i].nome+'</label><div class="row"><div class="col-10"><input type="range" class="form-control-range" value="0" data-value="'+hab_pro[i].valor+'"></div><div class="col-1" style="margin-top: -5px;">0%</div></div></div>');
+        $(".habilidades_idiomas").find(".hab").append('<div class="col-4"><br /><label>'+hab_pro[i].nome+'</label><div class="row"><div class="col-10"><input type="range" class="form-control-range" value="0" data-value="'+hab_pro[i].valor+'"></div><div class="col-1" style="margin-top: -5px;">0%</div></div></div>');
+    }
+    ranges(25);
       </script>
 </body>
 
