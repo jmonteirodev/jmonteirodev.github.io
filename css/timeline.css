@@ -27,7 +27,7 @@
     border-color: transparent transparent transparent #1a237e  ;
 }
 .timeline-azul.timeline .right::before {
-    border-color: transparent  #1a237e  transparent transparent;
+    border-color: transparent  #1a237e  transparent #1a237e;
 }
 
 .timeline div div{
@@ -106,7 +106,6 @@
     left: 30px;
     border: medium solid white;
     border-width: 10px 10px 10px 0;
-    border-color: transparent #4a148c  transparent transparent;
   }
   
   /* Fix the circle for containers on the right side */
@@ -146,10 +145,17 @@
   
     /* Make sure all circles are at the same spot */
     .left::after, .right::after {
-    left: 15px;
+    left: 18px;
     }
     
     /* Make all right containers behave like the left ones */
     .right {
     left: 0%;
     }
+    .timeline-azul.timeline .left::before {
+      border-color: transparent  #1a237e  transparent transparent;
+    }
+    .timeline-roxo.timeline .left::before {
+      border-color: transparent  #4a148c  transparent transparent;
+    }
+  }
