@@ -18,12 +18,52 @@
     <link rel="stylesheet" href="css/jquery.bxslider.min.css">
     <link rel="stylesheet" href="css/timeline.css">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Importar dados -->
+    <script src="dados/certificados.js"></script>
+    <script src="dados/projetos.js"></script>
+
     <style>
-        .card-body a{
+        .card-body a {
             color: black !important;
         }
-        .card-body a:hover{
+
+        .card-body a:hover {
             color: blue !important;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #008CBA;
+        }
+
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .projeto {
+            padding: 15px;
         }
     </style>
 </head>
@@ -46,20 +86,25 @@
                         <!-- Logo -->
                         <a class="navbar-brand semLink" style="font-size: 14px" href="index.html">JONATHAN MONTEIRO</a>
                         <!-- Navbar Toggler -->
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#worldNav" aria-controls="worldNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#worldNav"
+                            aria-controls="worldNav" aria-expanded="false" aria-label="Toggle navigation"><span
+                                class="navbar-toggler-icon"></span></button>
                         <!-- Navbar -->
                         <div class="collapse navbar-collapse" id="worldNav">
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link" href="index.html">Home <span
+                                            class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portfólio</a>
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portfólio</a>
                                     <div class="dropdown-menu linksPortfolioHeader" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="portfolio.html">Principais projetos</a>
                                         <a class="dropdown-item" href="portfolio/sites/sites.html">Sites/sistemas</a>
                                         <a class="dropdown-item" href="portfolio/jogos/jogos.html">Jogos</a>
-                                        <a class="dropdown-item" href="portfolio/aplicativos/aplicativos.html">Aplicativos</a>
+                                        <a class="dropdown-item"
+                                            href="portfolio/aplicativos/aplicativos.html">Aplicativos</a>
                                         <a class="dropdown-item" href="portfolio/designs/designs.html">Designs</a>
                                     </div>
                                 </li>
@@ -75,33 +120,42 @@
         <br />
         <div class="container">
             <div class="world-latest-articles">
-            <div class="row">
-                <div class="col-12 col-lg-12">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-12">
-                            <img src="img/jonathan.jpg" class="card-img d-none d-lg-block" alt="...">
+                <div class="row">
+                    <div class="col-12 col-lg-12">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-12">
+                                <img src="img/jonathan.jpg" class="card-img d-none d-lg-block" alt="...">
                             </div>
                             <div class="col-lg-7 col-sm-12">
                                 <div class="card-body">
                                     <h4 class="card-title" id="titulo">O</h4>
                                     <p class="card-text" id="mensagem" style="color: black; font-size: 16px;">
-                                        Graduando em Sistemas e Mídias Digitais na Universidade Federal do Ceará. Estou sempre em busca de colocar em prática minha experiência e aprender cada dia mais. Conto com minha aptidão de aprendizagem e força de vontade desempenhando facilidade em trabalhos em grupo ou individual.
+                                        Graduando em Sistemas e Mídias Digitais na Universidade Federal do Ceará. Estou
+                                        sempre em busca de colocar em prática minha experiência e aprender cada dia
+                                        mais. Conto com minha aptidão de aprendizagem e força de vontade desempenhando
+                                        facilidade em trabalhos em grupo ou individual.
                                     </p>
                                     <p class="card-text" id="mensagem2" style="color: black; font-size: 16px;">
-                                        Fique a vontade para ver alguns trabalhos meus na página de portfólio, olhe meu histórico profissional e o educacional mais abaixo. Conheça também minhas habilidades!
+                                        Fique a vontade para ver alguns trabalhos meus na página de portfólio, olhe meu
+                                        histórico profissional e o educacional mais abaixo. Conheça também minhas
+                                        habilidades!
                                     </p>
                                     <h5>Contato:</h5>
                                     <div class="row">
                                         <div class="col-md-6 col-sm-12">
                                             <ul>
                                                 <li style="color: black">(85) 99159-4162</li>
-                                                <li><a style="font-size: 16px;" href="https://www.linkedin.com/in/jonathan-monteiro-1b13b3145/">Ver Linkedin</a></li>
+                                                <li><a style="font-size: 16px;"
+                                                        href="https://www.linkedin.com/in/jonathan-monteiro-1b13b3145/">Ver
+                                                        Linkedin</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-sm-12">
                                             <ul>
                                                 <li style="color: black">jonathanmonteirodev@gmail.com</li>
-                                                <li><a style="font-size: 16px;" href="https://github.com/jonathanmonteirodev">Ver Github</a></li>
+                                                <li><a style="font-size: 16px;"
+                                                        href="https://github.com/jonathanmonteirodev">Ver Github</a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -118,51 +172,65 @@
                             <h2 style="text-align: center;">EXPERIÊNCIAS PROFISSIONAIS</h2>
                             <div class="timeline-roxo timeline">
                                 <div class="container-timeline left">
-                                  <div class="content">
-                                    <h2>2019 - -</h2>
-                                    <h4>Desenvolvedor Salesforce</h4>
-                                    <p style="text-indent: 0px;color:black">Moldsoft Tecnologia Ltda. - Fortaleza, Ceará</p>
-                                    <p style="text-indent: 0px;color:black">Administração e configuração do CRM Salesforce; Desenvolvimento de classes Apex, páginas Visualforce, componentes do Lightning.</p>
-                                  </div>
+                                    <div class="content">
+                                        <h2>2019 - -</h2>
+                                        <h4>Desenvolvedor Salesforce</h4>
+                                        <p style="text-indent: 0px;color:black">Moldsoft Tecnologia Ltda. - Fortaleza,
+                                            Ceará</p>
+                                        <p style="text-indent: 0px;color:black">Administração e configuração do CRM
+                                            Salesforce; Desenvolvimento de classes Apex, páginas Visualforce,
+                                            componentes do Lightning.</p>
+                                    </div>
                                 </div>
                                 <div class="container-timeline right">
-                                  <div class="content">
-                                    <h2>2018 - 2019</h2>
-                                    <h4>Estagiário Desenvolvedor</h4>
-                                    <p style="text-indent: 0px;color:black">Moldsoft Tecnologia Ltda. - Fortaleza, Ceará</p>
-                                    <p style="text-indent: 0px;color:black">Administração e configuração do CRM Salesforce; Desenvolvimento de classes Apex, páginas Visualforce, componentes do Lightning.</p>
-                                  </div>
+                                    <div class="content">
+                                        <h2>2018 - 2019</h2>
+                                        <h4>Estagiário Desenvolvedor</h4>
+                                        <p style="text-indent: 0px;color:black">Moldsoft Tecnologia Ltda. - Fortaleza,
+                                            Ceará</p>
+                                        <p style="text-indent: 0px;color:black">Administração e configuração do CRM
+                                            Salesforce; Desenvolvimento de classes Apex, páginas Visualforce,
+                                            componentes do Lightning.</p>
+                                    </div>
                                 </div>
-                              </div>
+                            </div>
                         </div>
                         <br />
                         <div>
                             <h2 style="text-align: center;">FORMAÇÃO ACADÊMICA</h2>
                             <div class="timeline-azul timeline">
                                 <div class="container-timeline left">
-                                  <div class="content">
-                                    <h2>2019 - 2024</h2>
-                                    <h5>Graduação em Sistemas e Mídias Digitais</h5>
-                                    <p style="text-indent: 0px;color:black"><b>Universidade Federal do Ceará</b></p>
-                                    <p style="text-indent: 0px;color:black">O objetivo é desenvolver sistemas para web e dispositivos móveis. Profissionais de Sistemas e Mídias Digitais são capazes, por exemplo, de desenvolver simuladores seja de tiro para treinamento de policiais, seja de cirurgias para estudantes de Medicina.</p>
-                                  </div>
+                                    <div class="content">
+                                        <h2>2019 - 2024</h2>
+                                        <h5>Graduação em Sistemas e Mídias Digitais</h5>
+                                        <p style="text-indent: 0px;color:black"><b>Universidade Federal do Ceará</b></p>
+                                        <p style="text-indent: 0px;color:black">O objetivo é desenvolver sistemas para
+                                            web e dispositivos móveis. Profissionais de Sistemas e Mídias Digitais são
+                                            capazes, por exemplo, de desenvolver simuladores seja de tiro para
+                                            treinamento de policiais, seja de cirurgias para estudantes de Medicina.</p>
+                                    </div>
                                 </div>
                                 <div class="container-timeline right">
-                                  <div class="content">
-                                    <h2>2016 - 2018</h2>
-                                    <h5>Ensino médio integrado ao curso técnico em Informática</h5>
-                                    <p style="text-indent: 0px;color:black"><b>Escola Estadual de Educação Profissional Paulo Petrola</b></p>
-                                    <p style="text-indent: 0px;color:black">O técnico em Informática tem como objetivo formar o profissional que desempenha atividades ligadas a montagem e manutenção de microcomputadores, instalação e configuração de redes, desenvolvimento de sistemas e websites, etc. O profissional está habilitado para atuar em diversas áreas da Tecnologia da Informação.</p>
-                                  </div>
+                                    <div class="content">
+                                        <h2>2016 - 2018</h2>
+                                        <h5>Ensino médio integrado ao curso técnico em Informática</h5>
+                                        <p style="text-indent: 0px;color:black"><b>Escola Estadual de Educação
+                                                Profissional Paulo Petrola</b></p>
+                                        <p style="text-indent: 0px;color:black">O técnico em Informática tem como
+                                            objetivo formar o profissional que desempenha atividades ligadas a montagem
+                                            e manutenção de microcomputadores, instalação e configuração de redes,
+                                            desenvolvimento de sistemas e websites, etc. O profissional está habilitado
+                                            para atuar em diversas áreas da Tecnologia da Informação.</p>
+                                    </div>
                                 </div>
-                              </div>
+                            </div>
                         </div>
                         <br>
                         <div>
                             <h2 style="text-align: center;">HABILIDADES</h2>
                             <div class="habilidades_profissional">
                                 <div class="title">
-                                    <h5  style="padding-left: 30px">Profissional</h5>
+                                    <h5 style="padding-left: 30px">Profissional</h5>
                                 </div>
                                 <div class="row hab">
                                     <div class="col-lg-4 col-md-6 col-sm-12">
@@ -170,7 +238,8 @@
                                         <label>HTML</label>
                                         <div class="row">
                                             <div class="col-10">
-                                                <input type="range" class="form-control-range" value="0" data-value="100">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="100" />
                                             </div>
                                             <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
                                         </div>
@@ -180,7 +249,8 @@
                                         <label>CSS</label>
                                         <div class="row">
                                             <div class="col-10">
-                                                <input type="range" class="form-control-range" value="0" data-value="80">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="80" />
                                             </div>
                                             <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
                                         </div>
@@ -190,7 +260,8 @@
                                         <label>JavaScript</label>
                                         <div class="row">
                                             <div class="col-10">
-                                                <input type="range" class="form-control-range" value="0" data-value="80">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="80" />
                                             </div>
                                             <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
                                         </div>
@@ -200,7 +271,8 @@
                                         <label>PHP</label>
                                         <div class="row">
                                             <div class="col-10">
-                                                <input type="range" class="form-control-range" value="0" data-value="60">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="60" />
                                             </div>
                                             <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
                                         </div>
@@ -210,7 +282,8 @@
                                         <label>Git</label>
                                         <div class="row">
                                             <div class="col-10">
-                                                <input type="range" class="form-control-range" value="0" data-value="100">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="100" />
                                             </div>
                                             <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
                                         </div>
@@ -220,7 +293,8 @@
                                         <label>Banco de Dados</label>
                                         <div class="row">
                                             <div class="col-10">
-                                                <input type="range" class="form-control-range" value="0" data-value="80">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="80" />
                                             </div>
                                             <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
                                         </div>
@@ -230,7 +304,8 @@
                                         <label>Android</label>
                                         <div class="row">
                                             <div class="col-10">
-                                                <input type="range" class="form-control-range" value="0" data-value="80">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="80" />
                                             </div>
                                             <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
                                         </div>
@@ -240,7 +315,8 @@
                                         <label>Integração de API</label>
                                         <div class="row">
                                             <div class="col-10">
-                                                <input type="range" class="form-control-range" value="0" data-value="70">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="70" />
                                             </div>
                                             <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
                                         </div>
@@ -250,7 +326,8 @@
                                         <label>Inteligência Artificial</label>
                                         <div class="row">
                                             <div class="col-10">
-                                                <input type="range" class="form-control-range" value="0" data-value="30">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="30" />
                                             </div>
                                             <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
                                         </div>
@@ -260,7 +337,8 @@
                                         <label>C</label>
                                         <div class="row">
                                             <div class="col-10">
-                                                <input type="range" class="form-control-range" value="0" data-value="70">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="70" />
                                             </div>
                                             <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
                                         </div>
@@ -270,7 +348,8 @@
                                         <label>C++</label>
                                         <div class="row">
                                             <div class="col-10">
-                                                <input type="range" class="form-control-range" value="0" data-value="60">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="60" />
                                             </div>
                                             <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
                                         </div>
@@ -280,7 +359,8 @@
                                         <label>Godot Script</label>
                                         <div class="row">
                                             <div class="col-10">
-                                                <input type="range" class="form-control-range" value="0" data-value="70">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="70" />
                                             </div>
                                             <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
                                         </div>
@@ -290,7 +370,8 @@
                                         <label>Photoshop</label>
                                         <div class="row">
                                             <div class="col-10">
-                                                <input type="range" class="form-control-range" value="0" data-value="60">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="60" />
                                             </div>
                                             <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
                                         </div>
@@ -300,7 +381,8 @@
                                         <label>Illustrator</label>
                                         <div class="row">
                                             <div class="col-10">
-                                                <input type="range" class="form-control-range" value="0" data-value="70">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="70" />
                                             </div>
                                             <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
                                         </div>
@@ -310,7 +392,8 @@
                                         <label>Técnicas de Animação</label>
                                         <div class="row">
                                             <div class="col-10">
-                                                <input type="range" class="form-control-range" value="0" data-value="60">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="60" />
                                             </div>
                                             <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
                                         </div>
@@ -319,7 +402,7 @@
                             </div>
                             <div class="habilidades_pessoal">
                                 <div class="title">
-                                    <h5  style="padding-left: 30px">Pessoal</h5>
+                                    <h5 style="padding-left: 30px">Pessoal</h5>
                                 </div>
                                 <div class="row hab">
                                     <div class="col-lg-4 col-md-6 col-sm-12">
@@ -327,7 +410,8 @@
                                         <label>Busca por conhecimento</label>
                                         <div class="row">
                                             <div class="col-10">
-                                                <input type="range" class="form-control-range" value="0" data-value="100">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="100" />
                                             </div>
                                             <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
                                         </div>
@@ -337,116 +421,127 @@
                                         <label>Passar conhecimento</label>
                                         <div class="row">
                                             <div class="col-10">
-                                                <input type="range" class="form-control-range" value="0" data-value="100">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="100" />
                                             </div>
                                             <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
                                         </div>
                                     </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <br />
-                                    <label>Responsabilidade</label>
-                                    <div class="row">
-                                        <div class="col-10">
-                                            <input type="range" class="form-control-range" value="0" data-value="90">
+                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                        <br />
+                                        <label>Responsabilidade</label>
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="90" />
+                                            </div>
+                                            <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
                                         </div>
-                                        <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                        <br />
+                                        <label>Curiosidade</label>
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="90" />
+                                            </div>
+                                            <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                        <br />
+                                        <label>Criatividade</label>
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="80" />
+                                            </div>
+                                            <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                        <br />
+                                        <label>Liderança</label>
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="80" />
+                                            </div>
+                                            <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                        <br />
+                                        <label>Proatividade</label>
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="100" />
+                                            </div>
+                                            <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                        <br />
+                                        <label>Honestidade e Ética</label>
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="100" />
+                                            </div>
+                                            <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                        <br />
+                                        <label>Amor pelo que faz</label>
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="100" />
+                                            </div>
+                                            <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                        <br />
+                                        <label>Educação e gentileza</label>
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="100" />
+                                            </div>
+                                            <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                        <br />
+                                        <label>Comunicação</label>
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="80" />
+                                            </div>
+                                            <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                        <br />
+                                        <label>Comprometimento</label>
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="100" />
+                                            </div>
+                                            <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <br />
-                                    <label>Curiosidade</label>
-                                    <div class="row">
-                                        <div class="col-10">
-                                            <input type="range" class="form-control-range" value="0" data-value="90">
-                                        </div>
-                                        <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <br />
-                                    <label>Criatividade</label>
-                                    <div class="row">
-                                        <div class="col-10">
-                                            <input type="range" class="form-control-range" value="0" data-value="80">
-                                        </div>
-                                        <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <br />
-                                    <label>Liderança</label>
-                                    <div class="row">
-                                        <div class="col-10">
-                                            <input type="range" class="form-control-range" value="0" data-value="80">
-                                        </div>
-                                        <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <br />
-                                    <label>Proatividade</label>
-                                    <div class="row">
-                                        <div class="col-10">
-                                            <input type="range" class="form-control-range" value="0" data-value="100">
-                                        </div>
-                                        <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <br />
-                                    <label>Honestidade e Ética</label>
-                                    <div class="row">
-                                        <div class="col-10">
-                                            <input type="range" class="form-control-range" value="0" data-value="100">
-                                        </div>
-                                        <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <br />
-                                    <label>Amor pelo que faz</label>
-                                    <div class="row">
-                                        <div class="col-10">
-                                            <input type="range" class="form-control-range" value="0" data-value="100">
-                                        </div>
-                                        <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <br />
-                                    <label>Educação e gentileza</label>
-                                    <div class="row">
-                                        <div class="col-10">
-                                            <input type="range" class="form-control-range" value="0" data-value="100">
-                                        </div>
-                                        <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <br />
-                                    <label>Comunicação</label>
-                                    <div class="row">
-                                        <div class="col-10">
-                                            <input type="range" class="form-control-range" value="0" data-value="80">
-                                        </div>
-                                        <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <br />
-                                    <label>Comprometimento</label>
-                                    <div class="row">
-                                        <div class="col-10">
-                                            <input type="range" class="form-control-range" value="0" data-value="100">
-                                        </div>
-                                        <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
-                                    </div>
-                                </div>
-                            </div>
                             </div>
                             <div class="habilidades_idiomas">
                                 <div class="title">
-                                    <h5  style="padding-left: 30px">Idiomas</h5>
+                                    <h5 style="padding-left: 30px">Idiomas</h5>
                                 </div>
                                 <div class="row hab">
                                     <div class="col-lg-4 col-md-6 col-sm-12">
@@ -454,7 +549,8 @@
                                         <label>Português</label>
                                         <div class="row">
                                             <div class="col-10">
-                                                <input type="range" class="form-control-range" value="0" data-value="100">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="100" />
                                             </div>
                                             <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
                                         </div>
@@ -464,7 +560,8 @@
                                         <label>Inglês</label>
                                         <div class="row">
                                             <div class="col-10">
-                                                <input type="range" class="form-control-range" value="0" data-value="90">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="90" />
                                             </div>
                                             <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
                                         </div>
@@ -474,7 +571,8 @@
                                         <label>Espanhol</label>
                                         <div class="row">
                                             <div class="col-10">
-                                                <input type="range" class="form-control-range" value="0" data-value="70">
+                                                <input type="range" class="form-control-range" value="0"
+                                                    data-value="70" />
                                             </div>
                                             <div class="col-1" style="margin-top: -5px;margin-left: -10px">0%</div>
                                         </div>
@@ -482,19 +580,69 @@
                                 </div>
                             </div>
                         </div>
+                        <div>
+                            <br>
+                            <h2 style="text-align: center;">CURSOS</h2>
+                            <center>
+                                <div id="buttons">
+                                    <button type="button" class="btn btn-outline-primary" onclick="filtrarPaginacao(this)"
+                                        style="margin:10px">TODOS</button>
+                                </div>
+                            </center>
+                            <div id="certificados" class="row">
+                            </div>
+                            <nav aria-label="Page navigation example"
+                                style="position: absolute;left: 50%;margin-top: 2%;transform: translate(-50%, -50%);">
+                                <ul class="pagination">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" aria-label="Previous" onclick="abaAnterior('#certificados')">
+                                            <span aria-hidden="true">&laquo;</span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <footer class="footer-area" style="padding: 30px" >
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-certificado" tabindex="-1" role="dialog" aria-labelledby="modal-certificadoLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-certificadoLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="" style="width: 100%;height: 100%;" />
+                    <br>
+                    <br>
+                    <p style="font-size: 16px; color: black;"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer-area" style="padding: 30px">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-6">
                     <div class="footer-single-widget">
                         <a href="index.html" class="semLink">JONATHAN MONTEIRO</a>
                         <div class="mt-30" style="color: #e0e0e0; font-size: 15px">
-                            Desenvolvido pelo graduando Jonathan Monteiro para a cadeira Matemática aplicada a multimídia do curso de Sistemas e Mídias Digitais.
+                            Desenvolvido pelo graduando Jonathan Monteiro para a cadeira Matemática aplicada a
+                            multimídia do curso de Sistemas e Mídias Digitais.
                         </div>
                     </div>
                 </div>
@@ -524,71 +672,90 @@
     <!-- Bootstrap js -->
     <script src="js/bootstrap.min.js"></script>
     <!-- Plugins js -->
+    <script src="js/paginacao.js"></script>
     <script src="js/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
     <script src="js/infos.js"></script>
     <script src="js/jquery.bxslider.min.js"></script>
-      <script>
-        for(i in projetos){
-            $(".bxslider").append('<li><a href="portfolio/'+projetos[i].tipo+'s/'+projetos[i].tipo+'s.html"><img src="'+projetos[i].src+'" /></a></li>');
+
+    <script>
+        for (i in projetos) {
+            $(".bxslider").append('<li><a href="portfolio/' + projetos[i].tipo + 's/' + projetos[i].tipo + 's.html"><img src="' + projetos[i].src + '" /></a></li>');
         }
-        function mudarPagina(pagina){
+        function mudarPagina(pagina) {
             window.location = pagina;
         }
         function escrever(str, el, tempo) {
             var char = str.split('').reverse();
-            var typer = setInterval(function() {
-            if (!char.length){ 
-                piscar("_", el, 350)
-                return clearInterval(typer);
-            }
+            var typer = setInterval(function () {
+                if (!char.length) {
+                    piscar("_", el, 350)
+                    return clearInterval(typer);
+                }
                 var next = char.pop();
                 $(el).append(next);
             }, tempo);
         }
         function ranges(tempo) {
             var contador = 0;
-            var typer = setInterval(function() {
+            var typer = setInterval(function () {
                 contador++;
-                $("input[type='range']").each(function(){
+                $("input[type='range']").each(function () {
                     parar = true;
-                    if($(this).val() < parseInt($(this).attr("data-value"))){
+                    if ($(this).val() < parseInt($(this).attr("data-value"))) {
                         parar = false;
                         var valor = parseInt($(this).val());
                         valor++;
                         $(this).val(valor);
-                        $(this).closest(".row").find(".col-1").html(valor+"%");
+                        $(this).closest(".row").find(".col-1").html(valor + "%");
                     }
                 });
-                if (contador == 100){ 
+                if (contador == 100) {
                     return clearInterval(typer);
                 }
             }, tempo);
         }
-        function piscar(str, el, tempo){
+        function piscar(str, el, tempo) {
             var show = false;
-            var typer = setInterval(function() {
+            var typer = setInterval(function () {
                 show = !show;
-                if(show){
+                if (show) {
                     $(el).append(str);
-                }else{
-                    $(el).html($(el).html().replace(str,""));
+                } else {
+                    $(el).html($(el).html().replace(str, ""));
                 }
             }, tempo);
         }
-        escrever('lá, sou Jonathan Monteiro, desenvolvedor web', '#titulo',60);
+        escrever('lá, sou Jonathan Monteiro, desenvolvedor web', '#titulo', 60);
         $('.bxslider').bxSlider({
-        minSlides: 1,	
-        maxSlides: 6,
-        slideWidth: 350,
-        slideHeight: 350,
-        moveSlides: 1,
-        auto: true,
-        slideMargin:20
-    });
-    ranges(25);
-      </script>
+            minSlides: 1,
+            maxSlides: 6,
+            slideWidth: 350,
+            slideHeight: 350,
+            moveSlides: 1,
+            auto: true,
+            slideMargin: 20
+        });
+        ranges(25);
+
+        initPaginacao("#certificados",certificados, false, true, false);
+
+
+        function irPara(pagina, nome) {
+            window.location = "portfolio/" + pagina + 's/' + pagina + '.html?' + pagina + '=' + nome;
+        }
+
+        function atualizaModal(id) {
+            var certificado = certificados.filter((value) => {
+                return value.id == id;
+            })[0];
+            $("#modal-certificadoLabel").html(certificado.nome);
+            $("#modal-certificado").find("img").attr("src", certificado.src);
+            $("#modal-certificado").find("p").html(certificado.texto);
+            console.log(certificado);
+        }
+    </script>
 </body>
 
 </html>

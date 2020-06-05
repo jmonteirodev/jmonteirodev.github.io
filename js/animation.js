@@ -108,7 +108,6 @@ function anima(w, h, nof, local, canvas_id) {
 	}
 	// Get canvas
 	var canvas = document.getElementById(canvas_id);
-	console.log(canvas);
 	// Create sprite sheet
 	coinImage = new Image();
 	// Create sprite

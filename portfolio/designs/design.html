@@ -13,6 +13,10 @@
 
         <!-- Favicon  -->
         <link rel="icon" href="../../img/core-img/favicon.ico">
+    
+        <!-- Importar dados -->
+        <script src="../../dados/projetos.js"></script>
+        
         <style type="text/css">
             .container {
               position: relative;
@@ -114,11 +118,11 @@
                               <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
                                 <li class="breadcrumb-item"><a href="../../portfolio.html">Portfólio</a></li>
-                                <li class="breadcrumb-item"><a href="../jogos/jogos.html">Jogos</a></li>
-                                <li class="breadcrumb-item active" id="jogo" style="color: black">Jogo</li>
+                                <li class="breadcrumb-item"><a href="../designs/designs.html">Designs</a></li>
+                                <li class="breadcrumb-item active" id="design" style="color: black">Design</li>
                             </ol>
                         </nav>
-                        <h5  style="padding-left: 30px">Jogo: </h5>
+                        <h5  style="padding-left: 30px">Design: </h5>
                     </div>
                     <div class="container conteudo">
                         <div class="row">
@@ -206,7 +210,11 @@
         $("#participacao").html(design.participacao);
         $("#design").html(projetoNome);
         $(".title h5").append(projetoNome);
-        anima(625, 153, 4, "../../"+design.src, "design_local");
+        var design_info = design_infos.filter((design) => {
+            return design.nome == projetoNome;
+        })[0];
+        console.log(design_info);
+        anima(design_info.largura, design_info.altura, design_info.frames, "../../"+design.src, "design_local");
     }else{
         window.location = "designs.html";
     }
@@ -217,10 +225,6 @@
     $(".projeto").mouseout(function(){
         $(this).find(".overlay").css("opacity",0);
     });
-
-    function downloadZip(){
-        $("#zip").click();
-    }
 </script>
 </body>
 
